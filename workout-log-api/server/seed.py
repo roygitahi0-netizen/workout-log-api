@@ -26,7 +26,7 @@ WORKOUT_TITLES = [
     "Recovery Walk",
 ]
 
-SEED_PASSWORD = "password123"  # same for every seeded user, for easy manual login
+SEED_PASSWORD = "password123"  
 
 
 def seed():
