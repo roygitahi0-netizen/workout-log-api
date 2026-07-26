@@ -22,9 +22,6 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "dev-secret-key-change-me")
 app.json.compact = False
 
-# Cross-origin session cookies for local dev (frontend runs on a different
-# port than the API). In production, lock allow origins down and serve both
-# over HTTPS so SameSite=None; Secure cookies work correctly.
 app.config["SESSION_COOKIE_SAMESITE"] = "None"
 app.config["SESSION_COOKIE_SECURE"] = os.environ.get("FLASK_ENV") == "production"
 
